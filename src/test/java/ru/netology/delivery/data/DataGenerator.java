@@ -38,7 +38,7 @@ public class DataGenerator {
 
     public static String generateName(String locale) {
         Faker faker = new Faker(new Locale(locale));
-        String name = faker.name().name();
+        String name = faker.name().nameWithMiddle();
         String[] splittedWords = name.split(" ");
         if (splittedWords.length == 3) {
             name = splittedWords[0]+" "+splittedWords[2];
